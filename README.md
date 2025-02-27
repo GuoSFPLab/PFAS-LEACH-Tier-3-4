@@ -30,7 +30,7 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 
 ## Acknowledgements
 
-The development of PFAS-LEACH was supported by the Environmental Security Technology Certification Program (Project ER21-5041).
+This Excel tool for the PFAS-LEACH Tiers 3 and 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) was developed at the University of Arizona by Jacob Smith and Min Ma (equal contribution) under the direction of Dr. Bo Guo.  The development was a collaborative effort with Dr. Mark Brusseau. We would like to acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
 
 ## License
 
