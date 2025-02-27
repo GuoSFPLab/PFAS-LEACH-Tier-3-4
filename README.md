@@ -33,4 +33,4 @@ This project is licensed under the [CC BY-ND 4.0 License](https://github.com/Guo
 
 ## Contact
 
-For questions or support, please contact the development team at [boguo@arizona.edu](mailto:boguo@arizona.edu).
+For questions or support, please contact the development team at boguo@arizona.edu.
