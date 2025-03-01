@@ -20,8 +20,8 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
    - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
-3. **User Guide:**
-   - Refer to the user guide (User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf) for detailed instructions.
+3. **Refer to the User Guide for detailed instructions:**
+   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf
 
 ## Version History
 
