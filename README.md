@@ -17,11 +17,11 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Getting Started
 
 1. **Download the Tool:**
-   - [PFAS-LEACH-Tier-3-4 Excel Tool](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/releases)
+   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **User Guide:**
-   - Refer to the [User Guide](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/releases) for detailed instructions.
+   - Refer to the user guide (User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf) for detailed instructions.
 
 ## Version History
 
