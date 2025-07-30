@@ -26,7 +26,8 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Version History
 
 - **Beta version** - Initial Release for testing
-  - Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
+  - July 30th, 2025: Added two new features. 1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area, and 2) Ouput spatial concentration profiles. 
+  - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
 
 ## Acknowledgements
 
