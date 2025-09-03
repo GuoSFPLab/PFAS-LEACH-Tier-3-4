@@ -26,7 +26,7 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Version History
 
 - **Beta version** - Initial Release for testing
-  - Sept 2nd, 2025: 1) Added Module 2 that allows for Monte Carlo analysis, and 2) revised the user interface for Module 0 and Module 2, including that for the input of lysimeter porewater data. 
+  <!-- ... - Sept 2nd, 2025: 1) Added Module 2 that allows for Monte Carlo analysis, and 2) revised the user interface for Module 0 and Module 2, including that for the input of lysimeter porewater data. -->
   - July 30th, 2025: Added two new features. 1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area, and 2) output spatial concentration profiles. 
   - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
 
