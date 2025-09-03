@@ -17,15 +17,16 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Getting Started
 
 1. **Download the Tool:**
-   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm))
+   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta_09022025.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm))
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **Refer to the User Guide for detailed instructions:**
-   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf))
+   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta_09022025.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf))
 
 ## Version History
 
 - **Beta version** - Initial Release for testing
+  - Sept 2nd, 2025: 1) Added Module 2 that allows for Monte Carlo analysis, and 2) revised the user interface for Module 0 and Module 2, including that for the input of lysimeter porewater data. 
   - July 30th, 2025: Added two new features. 1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area, and 2) output spatial concentration profiles. 
   - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
 
