@@ -17,22 +17,30 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Getting Started
 
 1. **Download the Tool:**
-   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta_09022025.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0-beta.xlsm))
+   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm))
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **Refer to the User Guide for detailed instructions:**
-   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta_09022025.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.0-beta.pdf))
+   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.0.pdf))
 
 ## Version History
 
+- **Official releases**
+  - October 1st, 2025: Release of v1.0. 
+      1) Added Module 2 that allows for Monte Carlo-type uncertainty analysis.
+      2) Added a parameter visualization toolkit to visualize the parameter distributions in Module 2.
+      3) Revised the user interface for Modules 0, 1, and 2, especially the table for inputing lysimeter porewater data. 
+      4) Revised the user guide to cover all three modules and their example applications. 
+
 - **Beta version** - Initial Release for testing
-  <!-- ... - Sept 2nd, 2025: 1) Added Module 2 that allows for Monte Carlo analysis, and 2) revised the user interface for Module 0 and Module 2, including that for the input of lysimeter porewater data. -->
-  - July 30th, 2025: Added two new features. 1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area, and 2) output spatial concentration profiles. 
+  - July 30th, 2025: Added two new features. 
+      1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area.
+      2) Output spatial concentration profiles. 
   - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
 
 ## Acknowledgements
 
-This Excel tool for the PFAS-LEACH Tiers 3 and 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) was developed at the University of Arizona by Min Ma and Jacob Smith (equal contribution) under the direction of Prof. Bo Guo.  The development was a collaborative effort with Prof. Mark Brusseau. We would like to acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
+This Excel tool for the PFAS-LEACH Tiers 3 and 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) was developed at the University of Arizona by Min Ma and Jacob Smith under the direction of Prof. Bo Guo.  The development was a collaborative effort with Prof. Mark Brusseau. We would like to acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
 
 ## License
 
