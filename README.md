@@ -11,13 +11,13 @@ https://doi.org/10.1016/j.jhydrol.2021.127172)) and is implemented within a modi
 - **PFAS-LEACH-Analytical (Tier 3):** The core of PFAS-LEACH-Analytical is a set of analytical solutions that solve the partial differential equations for the leaching of PFAS in the vadose zone ([Guo et al., 2022](
 https://doi.org/10.1016/j.advwatres.2021.104102)). The vadose-zone analytical solutions are also coupled to a simple groundwater dilution factor model ([Smith et al., 2024](
 https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS concentration in a receptor well and deriving site-specific soil screening levels (SSLs) for a given acceptable groundwater PFAS concentration. The PFAS-LEACH-Analytical model allows one to compute, over time, the spatial profiles of PFAS concentration in the vadose zone, mass discharge rates to groundwater, and the groundwater PFAS concentration in a receptor well at the edge of the contaminated site. Additionally, given an acceptable PFAS concentration in groundwater, PFAS-LEACH-Analytical derives a site-specific soil screening level for a specific PFAS.
-- **PFAS-LEACH-DAF (Tier 4):** PFAS-LEACH-DAF is a revision to the widely used dilution attenuation factor (DAF) approach in the USEPA SSL framework ([USEPA, 1996](https://www.epa.gov/superfund/superfund-soil-screening-guidance)) for determining SSLs for PFAS ([Brusseau & Guo, 2023](
-https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF approach considers the adsorption of PFAS at the air--water interfaces when converting the porewater concentration to a soil concentration. PFAS-LEACH-DAF is a simple algebraic model to compute site-specific SSLs for PFAS. It does not represent any transport processes in the vadose zone (e.g., attenuation) and does not generate any space- or time-dependent results.
+- **PFAS-LEACH-DAF (Tier 4):** PFAS-LEACH-DAF is a revision to the widely used dilution attenuation factor (DAF) approach in the USEPA SSL framework ([USEPA, 1996](https://www.epa.gov/superfund/superfund-soil-screening-guidance)) for determining SSLs for PFAS ([Brusseau & Guo, 2023](https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF approach considers the adsorption of PFAS at the air--water interfaces when converting the porewater concentration to a soil concentration. PFAS-LEACH-DAF is a simple algebraic model to compute site-specific SSLs for PFAS. It does not represent any transport processes in the vadose zone (e.g., attenuation) and does not generate any space- or time-dependent results.
 
 ## Getting Started
 
 1. **Download the Tool:**
    - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm))
+   - It is recommended that users download the Excel tool and use it from a local drive. The graphical user interface sometimes may not display properly when the file is opened from an online drive. 
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **Refer to the User Guide for detailed instructions:**
@@ -26,6 +26,10 @@ https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF appr
 ## Version History
 
 - **Official releases**
+  - October 18th, 2025: 
+      1) Updated the database of PFAS properties for Module 2. 
+      2) Updated the user guide to remind users that the output dt for the time series needs to be sufficiently fine to capture the time evolution of mass discharge rates. 
+      3) Updated the user guide to remind users that they can use the SF estimated from the porewater concentration data for one representative PFAS and use it for other PFASs at the same site.
   - October 1st, 2025: Release of v1.0. 
       1) Added Module 2 that allows for Monte Carlo-type uncertainty analysis.
       2) Added a parameter visualization toolkit to visualize the parameter distributions in Module 2.
