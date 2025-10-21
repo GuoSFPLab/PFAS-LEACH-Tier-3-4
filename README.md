@@ -26,7 +26,9 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 ## Version History
 
 - **Official releases**
-  - October 18th, 2025: 
+  - October 20th, 2025: Updated v1.0
+      1) Added a warning in the Output Screen when dt is too big.
+  - October 18th, 2025: Updated v1.0
       1) Updated the database of PFAS properties for Module 2. 
       2) Updated the user guide to remind users that the output dt for the time series needs to be sufficiently fine to capture the time evolution of mass discharge rates. 
       3) Updated the user guide to remind users that they can use the SF estimated from the porewater concentration data for one representative PFAS and use it for other PFASs at the same site.
