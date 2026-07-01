@@ -16,16 +16,19 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 ## Getting Started
 
 1. **Download the Tool:**
-   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm))
+   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm))
    - It is recommended that users download the Excel tool and use it from a local drive. The graphical user interface sometimes may not display properly when the file is opened from an online drive. 
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **Refer to the User Guide for detailed instructions:**
-   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.0.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.0.pdf))
+   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf))
 
 ## Version History
 
 - **Official releases**
+  - July 1st, 2026: Release of v1.1.
+      1) Added an optional finite-duration surface mass loading boundary condition for PFAS-LEACH-Analytical to simulate continuous PFAS release from surface sources.
+      2) Updated the Monte Carlo simulation functionality in Module 2.
   - October 20th, 2025: Updated v1.0
       1) Added a warning in the Output Screen when dt is too big.
   - October 18th, 2025: Updated v1.0
