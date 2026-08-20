@@ -26,6 +26,10 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 ## Version History
 
 - **Official releases**
+   - August 20th, 2026: Updated v1.1.
+      1) Implemented a variable depth grid with 1-cm resolution in the upper 10 m and 10-cm resolution below 10 m to improve computational efficiency for thick vadose zones.
+      2) Revised the attenuation factor (AF) calculations to account for both the initial concentration profile and the finite-duration surface mass-loading boundary condition during the active loading period.
+      3) Implemented an adaptive fine-grid scheme with sub-centimeter resolution to improve numerical accuracy for small-scale domains and laboratory sand-column experiments.
   - July 1st, 2026: Release of v1.1.
       1) Added an optional finite-duration surface mass loading boundary condition for PFAS-LEACH-Analytical to simulate continuous PFAS release from surface sources.
       2) Updated the Monte Carlo simulation functionality in Module 2.
