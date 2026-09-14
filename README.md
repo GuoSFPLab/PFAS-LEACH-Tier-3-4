@@ -26,6 +26,8 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 ## Version History
 
 - **Official releases**
+   - September 14th, 2026: Updated v1.1.
+      1) Accelerated the Kinetic Solution solver to improve computational efficiency.
    - August 20th, 2026: Updated v1.1
       1) Implemented a variable depth grid with 1-cm resolution in the upper 10 m and 10-cm resolution below 10 m to improve computational efficiency for thick vadose zones.
       2) Revised the attenuation factor (AF) calculations to account for both the initial concentration profile and the finite-duration surface mass-loading boundary condition during the active loading period.
