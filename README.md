@@ -26,6 +26,9 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 ## Version History
 
 - **Official releases**
+   - November 5th, 2026: Updated v1.1.
+      1) Improved the numerical stability and accuracy of the kinetic sorption solver in Modules 0 and 1.
+      2) Corrected the coupling between water content and soil hydraulic parameters in Module 2 to improve Monte Carlo calculations.
    - September 14th, 2026: Updated v1.1.
       1) Accelerated the Kinetic Solution solver to improve computational efficiency.
    - August 20th, 2026: Updated v1.1
