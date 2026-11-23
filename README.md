@@ -23,6 +23,19 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 3. **Refer to the User Guide for detailed instructions:**
    - User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf))
 
+## Desktop application (macOS)
+
+A native macOS desktop application of the Tier 3 & 4 models
+(PFAS-LEACH-Analytical and PFAS-LEACH-DAF) is also available. It runs entirely
+on your computer and requires no Excel or macros.
+
+1. **Download:** PFAS-LEACH-macOS-arm64.zip ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/PFAS-LEACH-macOS-arm64.zip))
+2. **Requirements:** Apple Silicon Mac (M1 or newer), macOS 12 or later.
+3. **First launch:** The application is not notarized by Apple, so the first time you open it, right-click (Control-click) `PFAS-LEACH.app`, choose **Open**, and confirm. You only need to do this once.
+4. Refer to the bundled User Guide (click any blue (i) icon or the (?) button in the app).
+
+The Numerical 1D (Tier 2) model will be added in a future release.
+
 ## Version History
 
 - **Official releases**
