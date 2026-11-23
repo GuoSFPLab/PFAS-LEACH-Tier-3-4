@@ -15,6 +15,8 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 
 ## Getting Started
 
+### Excel tool
+
 1. **Download the Tool:**
    - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm))
    - It is recommended that users download the Excel tool and use it from a local drive. The graphical user interface sometimes may not display properly when the file is opened from an online drive. 
@@ -23,7 +25,7 @@ https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS 
 3. **Refer to the User Guide for detailed instructions:**
    - User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf))
 
-## Desktop application (macOS)
+### Desktop application (macOS)
 
 A native macOS desktop application of the Tier 3 & 4 models
 (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) is also available. It runs entirely
@@ -37,6 +39,8 @@ on your computer and requires no Excel or macros.
 The Numerical 1D (Tier 2) model will be added in a future release.
 
 ## Version History
+
+### Excel tool
 
 - **Official releases**
    - November 5th, 2026: Updated v1.1.
@@ -68,6 +72,11 @@ The Numerical 1D (Tier 2) model will be added in a future release.
       1) Allow for using lysimeter porewater concentration to estimate air-water interfacial area.
       2) Output spatial concentration profiles. 
   - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
+
+### Desktop application (macOS)
+
+- **Official releases**
+  - November 22nd, 2026: Initial release (v1.1). Native macOS desktop application of the Tier 3 & 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF), built from the Excel v1.1 models. Runs locally with no Excel or macros. The Numerical 1D (Tier 2) model is marked as coming soon.
 
 ## Acknowledgements
 
