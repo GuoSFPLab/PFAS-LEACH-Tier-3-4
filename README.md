@@ -33,7 +33,13 @@ A native desktop application of the Tier 3 & 4 models (PFAS-LEACH-Analytical and
 
 1. **Download:** PFAS-LEACH-macOS-arm64.zip ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/PFAS-LEACH-macOS-arm64.zip))
 2. **Requirements:** Apple Silicon Mac (M1 or newer), macOS 12 or later.
-3. **First launch:** The application is not notarized by Apple, so the first time you open it, right-click (Control-click) `PFAS-LEACH.app`, choose **Open**, and confirm. You only need to do this once.
+3. **First launch:** This application is not notarized by Apple, so after it is downloaded macOS marks it as "damaged" and refuses to open it. This is expected; the app is not actually damaged. To clear the quarantine flag, open the **Terminal** app and run the command below (replace the path with where you put `PFAS-LEACH.app`, e.g. your Downloads or Applications folder):
+
+   ```
+   xattr -dr com.apple.quarantine /path/to/PFAS-LEACH.app
+   ```
+
+   Then double-click `PFAS-LEACH.app` to open it. You only need to do this once. Tip: type `xattr -dr com.apple.quarantine ` (with a trailing space) in Terminal, then drag `PFAS-LEACH.app` into the window to fill in the path automatically.
 
 **Windows (x64)**
 
