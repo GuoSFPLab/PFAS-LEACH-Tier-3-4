@@ -83,6 +83,8 @@ The Python-based GUI runs locally in its own desktop window and requires no Exce
 
    macOS saves an exception, so subsequent launches should work normally. See [Apple’s instructions](https://support.apple.com/en-us/102445).
 
+4. **If macOS reports that the app is “damaged”:** Download the latest macOS ZIP again and extract a fresh copy using the built-in macOS Archive Utility (double-click the ZIP in Finder). Earlier packages contained `._` metadata files that some extraction methods left inside the app, causing its code-signature check to fail. The current package excludes these files. If the warning persists with a fresh copy, contact the development team with the exact message and your macOS version.
+
 **Windows (x64)**
 
 1. **Download:** [PFAS-LEACH-windows-x64.zip](Python-based%20GUI/PFAS-LEACH-windows-x64.zip?raw=true)
@@ -129,11 +131,12 @@ Refer to the bundled User Guide (click any blue (i) icon or the (?) button in th
 ### Python-based GUI
 
 - **Official releases**
+  - November 25th, 2026: Repackaged the macOS v1.1 download to exclude extraneous `._` metadata files that could cause code-signature verification failures after extraction. Application files, symbolic links, and existing signatures are unchanged.
   - November 2026: Initial release (v1.1). Independent Python implementation of the Tier 3 and Tier 4 analytical framework, distributed as desktop applications for macOS (Apple Silicon) and Windows (x64). Runs locally with no Excel, macros, or separate Python installation. [PFAS-LEACH-Numerical-1D](https://github.com/GuoSFPLab/PFAS-LEACH-Numerical-1D) (Tier 2) is not included in this release.
 
 ## Acknowledgements
 
-The PFAS-LEACH GUI framework is developed at the University of Arizona under the direction of Prof. Bo Guo, in collaboration with Prof. Mark Brusseau. The Excel-based GUI was developed by Min Ma and Jacob Smith. We acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
+The PFAS-LEACH GUI framework is developed at the University of Arizona under the direction of Prof. Bo Guo. We acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
 
 ## License
 
