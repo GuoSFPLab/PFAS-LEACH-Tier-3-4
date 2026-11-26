@@ -9,6 +9,43 @@ Both GUIs implement the same analytical framework: PFAS-LEACH-Analytical (Tier 3
 
 PFAS-LEACH is a decision-support platform for predicting PFAS leaching in source zones, with four model tiers of decreasing complexity. This repository provides the Tier 3 and Tier 4 GUIs. The more detailed PFAS-LEACH-COMP (Tier 1) model represents flow, transport, and transformation in three dimensions ([Guo et al., 2020](https://doi.org/10.1029/2019WR026667); [Zeng & Guo, 2021](https://doi.org/10.1016/j.advwatres.2021.104015)). [PFAS-LEACH-Numerical-1D](https://github.com/GuoSFPLab/PFAS-LEACH-Numerical-1D) (Tier 2), implemented within a modified open-source version of HYDRUS-1D, focuses on one-dimensional vertical leaching ([Zeng et al., 2021](https://doi.org/10.1016/j.jhydrol.2021.127172)). Tiers 1 and 2 are not included in the GUIs distributed here.
 
+## Getting Started
+
+### Excel-based GUI
+
+1. **Download Excel-based GUI v1.1:**
+   - [Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm](Excel-based%20GUI/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm?raw=true)
+   - Download the workbook and open it in desktop Microsoft Excel from a local drive. The Excel-based GUI may not display properly when the file is opened from an online drive.
+2. **Enable Macros:**
+   - Ensure macros are enabled in Excel to utilize the tool's full functionality.
+3. **Refer to the User Guide for detailed instructions:**
+   - [User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf](User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf)
+
+### Python-based GUI
+
+The Python-based GUI runs locally in its own desktop window and requires no Excel, macros, or separate Python installation. Download Python-based GUI v1.1 for your operating system below. These downloads contain packaged applications; Python source code is not included in this repository.
+
+**macOS (Apple Silicon)**
+
+1. **Download:** [PFAS-LEACH-macOS-arm64.zip](Python-based%20GUI/PFAS-LEACH-macOS-arm64.zip?raw=true)
+2. **Requirements:** Apple Silicon Mac (M1 or newer), macOS 12 or later.
+3. **First launch:** Extract the ZIP and try opening `PFAS-LEACH.app` once. This application is not yet notarized by Apple. If macOS blocks it with a warning about an unverified developer or an app that Apple cannot check:
+   - Go to **System Settings → Privacy & Security**.
+   - Scroll to **Security**, find the message about PFAS-LEACH, and click **Open Anyway**.
+   - Authenticate if prompted and confirm **Open**.
+
+   macOS saves an exception, so subsequent launches should work normally. See [Apple’s instructions](https://support.apple.com/en-us/102445).
+
+4. **If macOS reports that the app is “damaged”:** Download the latest macOS ZIP again and extract a fresh copy using the built-in macOS Archive Utility (double-click the ZIP in Finder). Earlier packages contained `._` metadata files that some extraction methods left inside the app, causing its code-signature check to fail. The current package excludes these files. If the warning persists with a fresh copy, contact the development team with the exact message and your macOS version.
+
+**Windows (x64)**
+
+1. **Download:** [PFAS-LEACH-windows-x64.zip](Python-based%20GUI/PFAS-LEACH-windows-x64.zip?raw=true)
+2. **Requirements:** Windows x64, Microsoft Edge WebView2 Runtime, and Microsoft .NET Framework 4.8.
+3. **First launch:** Extract the entire ZIP to a writable folder (keep the `_internal` folder beside `PFAS-LEACH.exe`), then open `PFAS-LEACH.exe`. Windows SmartScreen may warn because the app is not signed; choose **More info**, then **Run anyway**.
+
+Refer to the bundled User Guide (click any blue (i) icon or the (?) button in the app).
+
 ## Repository Layout
 
 ```text
@@ -55,43 +92,6 @@ The modules can be selected independently and do not need to be run sequentially
 ### Model assumptions and interpretation
 
 Tier 3 assumes one-dimensional transport through a homogeneous, uniformly unsaturated vadose zone, steady-state water flow, and linear adsorption. Tier 4 derives SSLs directly from equilibrium partitioning and does not simulate vadose-zone transport. Both tiers use simplified groundwater dilution and omit precursor transformation. Monte Carlo results are conditional on the prescribed input distributions, dependencies, and model assumptions. The framework supports screening-type assessments and can inform further site investigation and more detailed modeling.
-
-## Getting Started
-
-### Excel-based GUI
-
-1. **Download Excel-based GUI v1.1:**
-   - [Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm](Excel-based%20GUI/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm?raw=true)
-   - Download the workbook and open it in desktop Microsoft Excel from a local drive. The Excel-based GUI may not display properly when the file is opened from an online drive.
-2. **Enable Macros:**
-   - Ensure macros are enabled in Excel to utilize the tool's full functionality.
-3. **Refer to the User Guide for detailed instructions:**
-   - [User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf](User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf)
-
-### Python-based GUI
-
-The Python-based GUI runs locally in its own desktop window and requires no Excel, macros, or separate Python installation. Download Python-based GUI v1.1 for your operating system below. These downloads contain packaged applications; Python source code is not included in this repository.
-
-**macOS (Apple Silicon)**
-
-1. **Download:** [PFAS-LEACH-macOS-arm64.zip](Python-based%20GUI/PFAS-LEACH-macOS-arm64.zip?raw=true)
-2. **Requirements:** Apple Silicon Mac (M1 or newer), macOS 12 or later.
-3. **First launch:** Extract the ZIP and try opening `PFAS-LEACH.app` once. This application is not yet notarized by Apple. If macOS blocks it with a warning about an unverified developer or an app that Apple cannot check:
-   - Go to **System Settings → Privacy & Security**.
-   - Scroll to **Security**, find the message about PFAS-LEACH, and click **Open Anyway**.
-   - Authenticate if prompted and confirm **Open**.
-
-   macOS saves an exception, so subsequent launches should work normally. See [Apple’s instructions](https://support.apple.com/en-us/102445).
-
-4. **If macOS reports that the app is “damaged”:** Download the latest macOS ZIP again and extract a fresh copy using the built-in macOS Archive Utility (double-click the ZIP in Finder). Earlier packages contained `._` metadata files that some extraction methods left inside the app, causing its code-signature check to fail. The current package excludes these files. If the warning persists with a fresh copy, contact the development team with the exact message and your macOS version.
-
-**Windows (x64)**
-
-1. **Download:** [PFAS-LEACH-windows-x64.zip](Python-based%20GUI/PFAS-LEACH-windows-x64.zip?raw=true)
-2. **Requirements:** Windows x64, Microsoft Edge WebView2 Runtime, and Microsoft .NET Framework 4.8.
-3. **First launch:** Extract the entire ZIP to a writable folder (keep the `_internal` folder beside `PFAS-LEACH.exe`), then open `PFAS-LEACH.exe`. Windows SmartScreen may warn because the app is not signed; choose **More info**, then **Run anyway**.
-
-Refer to the bundled User Guide (click any blue (i) icon or the (?) button in the app).
 
 ## Version History
 
