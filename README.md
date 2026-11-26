@@ -1,49 +1,91 @@
 # PFAS-LEACH-Tier-3-4
 
-The PFAS-LEACH-Tier-3-4 repository provides an Excel-based tool that includes implementations of the Tiers 3 and 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) of PFAS-LEACH. 
+This repository provides **two independent implementations of the PFAS-LEACH graphical user interface (GUI)** for evaluating PFAS soil-to-groundwater leaching and deriving site-specific soil screening levels (SSLs):
 
-PFAS-LEACH is a comprehensive decision support platform for predicting PFAS leaching in source zones. It is comprised of four tiers of models at different levels of model complexity. In addition to the simplified Tiers 3 and 4 models documented here, PFAS-LEACH also includes two more sophisticated models (Tiers 1 and 2). The Tier 1 model incorporates a comprehensive representation of flow, transport, and transformation processes in three dimensions (3D), referred to as PFAS-LEACH-COMP ([Guo et al., 2020](https://doi.org/10.1029/2019WR026667); [Zeng & Guo, 2021](
-https://doi.org/10.1016/j.advwatres.2021.104015)). The Tier 2 model (PFAS-LEACH-HYDRUS) incorporates a set of simplifications to focus on one-dimensional leaching along the vertical direction ([Zeng et al., 2021](
-https://doi.org/10.1016/j.jhydrol.2021.127172)) and is implemented within a modified opensource version of the widely used industry-standard software, HYDRUS-1D. The codes for Tiers 1 and 2 models are being finalized and we hope to release the beta version soon.
+- **[Excel-based GUI](Excel-based%20GUI/):** A macro-enabled Microsoft Excel workbook.
+- **[Python-based GUI](Python-based%20GUI/):** A local Python application distributed as desktop applications for macOS (Apple Silicon) and Windows (x64).
+
+Both GUIs implement the same analytical framework: PFAS-LEACH-Analytical (Tier 3), PFAS-LEACH-DAF (Tier 4), and the standard USEPA dilution–attenuation factor (DAF) calculation for comparison. Both support parameter specification, deterministic simulation, sensitivity analysis, Monte Carlo uncertainty analysis, visualization, and export of results.
+
+PFAS-LEACH is a decision-support platform for predicting PFAS leaching in source zones, with four model tiers of decreasing complexity. This repository provides the Tier 3 and Tier 4 GUIs. The more detailed PFAS-LEACH-COMP (Tier 1) model represents flow, transport, and transformation in three dimensions ([Guo et al., 2020](https://doi.org/10.1029/2019WR026667); [Zeng & Guo, 2021](https://doi.org/10.1016/j.advwatres.2021.104015)). [PFAS-LEACH-Numerical-1D](https://github.com/GuoSFPLab/PFAS-LEACH-Numerical-1D) (Tier 2), implemented within a modified open-source version of HYDRUS-1D, focuses on one-dimensional vertical leaching ([Zeng et al., 2021](https://doi.org/10.1016/j.jhydrol.2021.127172)). Tiers 1 and 2 are not included in the GUIs distributed here.
+
+## Repository Layout
+
+```text
+Excel-based GUI/
+  Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm
+  Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.0.xlsm
+Python-based GUI/
+  PFAS-LEACH-macOS-arm64.zip
+  PFAS-LEACH-windows-x64.zip
+User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf
+User_Guide_PFAS-LEACH_Tiers_3_4_v1.0.pdf
+README.md
+LICENSE
+```
+
+The GUI user guides apply to both the Excel-based and Python-based tools. Version numbers identify software releases within each implementation, such as **Excel-based GUI v1.1** and **Python-based GUI v1.1**. The v1.0 Excel workbook and User Guide are retained for reference; use the v1.1 release of either GUI for current analyses.
 
 ## Features
 
-- **PFAS-LEACH-Analytical (Tier 3):** The core of PFAS-LEACH-Analytical is a set of analytical solutions that solve the partial differential equations for the leaching of PFAS in the vadose zone ([Guo et al., 2022](
-https://doi.org/10.1016/j.advwatres.2021.104102)). The vadose-zone analytical solutions are also coupled to a simple groundwater dilution factor model ([Smith et al., 2024](
-https://doi.org/10.1016/j.watres.2024.121236)), which allows for computing PFAS concentration in a receptor well and deriving site-specific soil screening levels (SSLs) for a given acceptable groundwater PFAS concentration. The PFAS-LEACH-Analytical model allows one to compute, over time, the spatial profiles of PFAS concentration in the vadose zone, mass discharge rates to groundwater, and the groundwater PFAS concentration in a receptor well at the edge of the contaminated site. Additionally, given an acceptable PFAS concentration in groundwater, PFAS-LEACH-Analytical derives a site-specific soil screening level for a specific PFAS.
-- **PFAS-LEACH-DAF (Tier 4):** PFAS-LEACH-DAF is a revision to the widely used dilution attenuation factor (DAF) approach in the USEPA SSL framework ([USEPA, 1996](https://www.epa.gov/superfund/superfund-soil-screening-guidance)) for determining SSLs for PFAS ([Brusseau & Guo, 2023](https://doi.org/10.1016/j.hazl.2023.100077)). The revised PFAS-specific DAF approach considers the adsorption of PFAS at the air--water interfaces when converting the porewater concentration to a soil concentration. PFAS-LEACH-DAF is a simple algebraic model to compute site-specific SSLs for PFAS. It does not represent any transport processes in the vadose zone (e.g., attenuation) and does not generate any space- or time-dependent results.
+- **PFAS-LEACH-Analytical (Tier 3):** Analytical solutions represent one-dimensional vadose-zone transport by advection and dispersion, with equilibrium air–water interfacial adsorption and either equilibrium or rate-limited solid-phase sorption ([Guo et al., 2022](https://doi.org/10.1016/j.advwatres.2021.104102)). These solutions are coupled to a groundwater dilution factor model ([Smith et al., 2024](https://doi.org/10.1016/j.watres.2024.121236)). Outputs include time-dependent vadose-zone concentration profiles, mass discharge rates to groundwater, receptor-well concentrations, and site-specific SSLs for a user-specified acceptable groundwater PFAS concentration. Source conditions can include an initial soil concentration profile and optional finite-duration surface mass loading.
+- **PFAS-LEACH-DAF (Tier 4):** A PFAS-specific revision of the USEPA DAF approach that includes air–water interfacial adsorption when converting porewater concentrations to soil concentrations ([Brusseau & Guo, 2023](https://doi.org/10.1016/j.hazl.2023.100077)). It derives site-specific SSLs from equilibrium partitioning and groundwater dilution, without explicitly simulating vadose-zone transport or attenuation. It does not generate space- or time-dependent results.
+- **Standard USEPA DAF comparison:** Both GUIs also calculate SSLs using the migration-to-groundwater approach in the [USEPA Soil Screening Guidance (1996)](https://www.epa.gov/superfund/superfund-soil-screening-guidance). This calculation omits air–water interfacial adsorption and explicit vadose-zone transport attenuation. These are calculated screening estimates using the specified inputs, not screening values published by USEPA.
+
+### Analysis modules shared by both GUIs
+
+| Module | Analysis | Purpose |
+| --- | --- | --- |
+| Module 0 | Deterministic | Simulate PFAS leaching and derive SSLs using a single parameter set. |
+| Module 1 | Sensitivity | Compare baseline results with user-defined left- and right-bound parameter scenarios to examine individual or combined input changes. |
+| Module 2 | Monte Carlo uncertainty | Propagate prescribed input distributions and parameter dependencies to obtain ensembles of predictions and summary statistics. |
+
+The modules can be selected independently and do not need to be run sequentially. Built-in reference data cover 12 soil textural classes and 45 PFAS. Reference values and parameter-estimation functions support input specification when measurements are unavailable; their applicability to the site should be evaluated, and site-specific measurements or estimates should be used where appropriate.
+
+### Differences between the GUIs
+
+| Function | Excel-based GUI | Python-based GUI |
+| --- | --- | --- |
+| Interface | Workbook with color-coded input cells and buttons | Expandable input sections within a local application |
+| Updating estimated parameters | Reapply the estimation function after changing its inputs | Derived values update automatically unless manually overridden |
+| Revising a completed analysis | Update estimates and rerun the analysis after changing inputs | Changes to relevant inputs mark results as outdated and prompt a rerun |
+| Saving an assessment | Save a separate workbook containing inputs, settings, and results | Save and reload cases containing inputs and analysis settings |
+| Rosetta soil hydraulic estimates | Obtain estimates externally and enter them into the workbook | Estimate parameters directly from soil texture and, when available, bulk density using built-in Rosetta access |
+
+### Model assumptions and interpretation
+
+Tier 3 assumes one-dimensional transport through a homogeneous, uniformly unsaturated vadose zone, steady-state water flow, and linear adsorption. Tier 4 derives SSLs directly from equilibrium partitioning and does not simulate vadose-zone transport. Both tiers use simplified groundwater dilution and omit precursor transformation. Monte Carlo results are conditional on the prescribed input distributions, dependencies, and model assumptions. The framework supports screening-type assessments and can inform further site investigation and more detailed modeling.
 
 ## Getting Started
 
-### Excel tool
+### Excel-based GUI
 
-1. **Download the Tool:**
-   - Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm))
-   - It is recommended that users download the Excel tool and use it from a local drive. The graphical user interface sometimes may not display properly when the file is opened from an online drive. 
+1. **Download Excel-based GUI v1.1:**
+   - [Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm](Excel-based%20GUI/Excel_Tool_for_PFAS-LEACH_Tier_3_4_v1.1.xlsm?raw=true)
+   - Download the workbook and open it in desktop Microsoft Excel from a local drive. The Excel-based GUI may not display properly when the file is opened from an online drive.
 2. **Enable Macros:**
    - Ensure macros are enabled in Excel to utilize the tool's full functionality.
 3. **Refer to the User Guide for detailed instructions:**
-   - User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf))
+   - [User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf](User_Guide_PFAS-LEACH_Tiers_3_4_v1.1.pdf)
 
-### Desktop application
+### Python-based GUI
 
-A native desktop application of the Tier 3 & 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) is also available. It runs entirely on your computer and requires no Excel or macros. The Numerical 1D (Tier 2) model will be added in a future release.
+The Python-based GUI runs locally in its own desktop window and requires no Excel, macros, or separate Python installation. Download Python-based GUI v1.1 for your operating system below. These downloads contain packaged applications; Python source code is not included in this repository.
 
 **macOS (Apple Silicon)**
 
-1. **Download:** PFAS-LEACH-macOS-arm64.zip ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/PFAS-LEACH-macOS-arm64.zip))
+1. **Download:** [PFAS-LEACH-macOS-arm64.zip](Python-based%20GUI/PFAS-LEACH-macOS-arm64.zip?raw=true)
 2. **Requirements:** Apple Silicon Mac (M1 or newer), macOS 12 or later.
-3. **First launch:** This application is not notarized by Apple, so after it is downloaded macOS marks it as "damaged" and refuses to open it. This is expected; the app is not actually damaged. To clear the quarantine flag, open the **Terminal** app and run the command below (replace the path with where you put `PFAS-LEACH.app`, e.g. your Downloads or Applications folder):
+3. **First launch:** Extract the ZIP and try opening `PFAS-LEACH.app` once. This application is not yet notarized by Apple. If macOS blocks it with a warning about an unverified developer or an app that Apple cannot check:
+   - Go to **System Settings → Privacy & Security**.
+   - Scroll to **Security**, find the message about PFAS-LEACH, and click **Open Anyway**.
+   - Authenticate if prompted and confirm **Open**.
 
-   ```
-   xattr -dr com.apple.quarantine /path/to/PFAS-LEACH.app
-   ```
-
-   Then double-click `PFAS-LEACH.app` to open it. You only need to do this once. Tip: type `xattr -dr com.apple.quarantine ` (with a trailing space) in Terminal, then drag `PFAS-LEACH.app` into the window to fill in the path automatically.
+   macOS saves an exception, so subsequent launches should work normally. See [Apple’s instructions](https://support.apple.com/en-us/102445).
 
 **Windows (x64)**
 
-1. **Download:** PFAS-LEACH-windows-x64.zip ([Link](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/raw/main/PFAS-LEACH-windows-x64.zip))
+1. **Download:** [PFAS-LEACH-windows-x64.zip](Python-based%20GUI/PFAS-LEACH-windows-x64.zip?raw=true)
 2. **Requirements:** Windows x64, Microsoft Edge WebView2 Runtime, and Microsoft .NET Framework 4.8.
 3. **First launch:** Extract the entire ZIP to a writable folder (keep the `_internal` folder beside `PFAS-LEACH.exe`), then open `PFAS-LEACH.exe`. Windows SmartScreen may warn because the app is not signed; choose **More info**, then **Run anyway**.
 
@@ -51,7 +93,7 @@ Refer to the bundled User Guide (click any blue (i) icon or the (?) button in th
 
 ## Version History
 
-### Excel tool
+### Excel-based GUI
 
 - **Official releases**
    - November 5th, 2026: Updated v1.1.
@@ -84,18 +126,18 @@ Refer to the bundled User Guide (click any blue (i) icon or the (?) button in th
       2) Output spatial concentration profiles. 
   - Feb 28th, 2025: Implemented core functionalities of PFAS-LEACH-Analytical and PFAS-LEACH-DAF models.
 
-### Desktop application
+### Python-based GUI
 
 - **Official releases**
-  - November 2026: Initial release (v1.1). Native desktop application for macOS (Apple Silicon) and Windows (x64) of the Tier 3 & 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF), built from the Excel v1.1 models. Runs locally with no Excel or macros. The Numerical 1D (Tier 2) model is marked as coming soon.
+  - November 2026: Initial release (v1.1). Independent Python implementation of the Tier 3 and Tier 4 analytical framework, distributed as desktop applications for macOS (Apple Silicon) and Windows (x64). Runs locally with no Excel, macros, or separate Python installation. [PFAS-LEACH-Numerical-1D](https://github.com/GuoSFPLab/PFAS-LEACH-Numerical-1D) (Tier 2) is not included in this release.
 
 ## Acknowledgements
 
-This Excel tool for the PFAS-LEACH Tiers 3 and 4 models (PFAS-LEACH-Analytical and PFAS-LEACH-DAF) was developed at the University of Arizona by Min Ma and Jacob Smith under the direction of Prof. Bo Guo.  The development was a collaborative effort with Prof. Mark Brusseau. We would like to acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
+The PFAS-LEACH GUI framework is developed at the University of Arizona under the direction of Prof. Bo Guo, in collaboration with Prof. Mark Brusseau. The Excel-based GUI was developed by Min Ma and Jacob Smith. We acknowledge funding support from the Environmental Security Technology Certification Program (ESTCP Project ER21-5041).
 
 ## License
 
-This project is licensed under the [CC BY-ND 4.0 License](https://github.com/GuoSFPLab/PFAS-LEACH-Tier-3-4/blob/main/LICENSE).
+This project is licensed under the [CC BY-ND 4.0 License](LICENSE).
 
 ## Contact
 
