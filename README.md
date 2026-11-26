@@ -36,8 +36,6 @@ The Python-based GUI runs locally in its own desktop window and requires no Exce
 
    macOS saves an exception, so subsequent launches should work normally. See [Apple’s instructions](https://support.apple.com/en-us/102445).
 
-4. **If macOS reports that the app is “damaged”:** Download the latest macOS ZIP again and extract a fresh copy using the built-in macOS Archive Utility (double-click the ZIP in Finder). Earlier packages contained `._` metadata files that some extraction methods left inside the app, causing its code-signature check to fail. The current package excludes these files. If the warning persists with a fresh copy, contact the development team with the exact message and your macOS version.
-
 **Windows (x64)**
 
 1. **Download:** [PFAS-LEACH-windows-x64.zip](Python-based%20GUI/PFAS-LEACH-windows-x64.zip?raw=true)
